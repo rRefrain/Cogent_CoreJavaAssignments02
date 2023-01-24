@@ -1,7 +1,7 @@
 package day07;
 
 /**
- * Driver class to demonstrate use of ArrayList()
+ * Driver class to demonstrate use of HashMap()
  * 
  * @author : michaelmiranda
  * @date   : Jan 23, 2023
