@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Day07;
+package day07;
 
 /**
  * Class to hold various data about a student

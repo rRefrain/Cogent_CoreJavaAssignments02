@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Day07;
+package day07;
 
 /**
  * Driver class to demonstrate use of ArrayList()
