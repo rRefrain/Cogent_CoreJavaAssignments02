@@ -3,8 +3,8 @@
 ### Batch#64
 
 - [ ] Day07
-  - [X] Question01
-  - [ ] Question02
+  - [X] Question01 
+  - [X] Question02
   - [ ] Question03
   - [ ] Question04
   - [ ] Question05
