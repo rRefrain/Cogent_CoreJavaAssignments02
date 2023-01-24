@@ -3,13 +3,14 @@
  */
 package day07;
 
+
 /**
  * Class to hold various data about a student
  * 
  * @author : michaelmiranda
  * @date   : Jan 23, 2023
  */
-public class Student {
+public class Student implements Comparable<Student> {
 	/** Student's ID */
 	private final int id;
 	
@@ -43,6 +44,31 @@ public class Student {
 		this.DOB = DOB;
 	}
 	
+	/** Getter for ID */
+	protected int getId() {
+		return id;
+	}
+	
+	/** Getter for Name */
+	protected String getName() {
+		return name;
+	}
+	
+	/** Getter for School */
+	protected String getSchool() {
+		return school;
+	}
+	
+	/** Getter for HomeAddress */
+	protected String getHomeAddress() {
+		return homeAddress;
+	}
+	
+	/** Getter for DOB */
+	protected String getDOB() {
+		return DOB;
+	}
+	
 	/**
 	 * Constructor to create a "blank" student with 
 	 * with a set name, as this class has an overriden equals method
@@ -73,16 +99,15 @@ public class Student {
 	 * @return String of a Student's information, details based off privateDetails
 	 */
 	public String getInfo(boolean privateDetails) {
-		String str = "Student: " + name + " ID: " + id + " School: " + school;
+		String str = "Student: " + name + " ID: " + getId() + " School: " + school;
 		if (privateDetails) {
 			str += "\nHome Adress: " + homeAddress + " DOB: " + DOB;
 		}
 		return str;
 	}
 	
-	
-	
 	@Override
+	/* Allows for .equals via only name lookup */
 	public boolean equals(Object o) { 
         /* Check if o is an instance of Student or not
           null instanceof Student also returns false */
@@ -97,5 +122,16 @@ public class Student {
         return this.name.equals(s.name);
   
     }
+	
+	@Override
+	public String toString() {
+		return this.getInfo(false);
+	}
+
+	@Override
+	/* Allows for Collections.sort() via name */
+	public int compareTo(Student s) {
+		return this.name.compareTo(s.name);
+	}
 	
 }

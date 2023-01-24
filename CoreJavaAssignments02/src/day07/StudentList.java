@@ -141,7 +141,6 @@ public class StudentList {
 		}
 	}
 	
-	
 	/**
 	 * Function to print the details of a single student
 	 * 
