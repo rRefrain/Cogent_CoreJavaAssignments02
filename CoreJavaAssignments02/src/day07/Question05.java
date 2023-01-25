@@ -18,7 +18,8 @@ public class Question05 {
 		registry.add(new Student(4, "Yuriya", "Aogent" , "Czzz 4222-Downing Ave", "July 18th 1999"));
 		registry.add(new Student(9, "Mark", "Dogent" , "Ezzz 4222-Dogen Ave", "July 21st 1999"));
 		
-		Consumer<ArrayList<Student> > dispList = (list) -> list.stream().forEach(s -> System.out.println(s.getInfo(true) + "\n"));
+		Consumer<ArrayList<Student> > dispList = (list) -> 
+			list.stream().forEach(s -> System.out.println(s.getInfo(true) + "\n"));
 		
 		System.out.println("Printing registry before sort: ");
 		dispList.accept(registry);
